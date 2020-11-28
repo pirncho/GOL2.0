@@ -140,11 +140,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Gen.h" />
+    <ClInclude Include="globales.h" />
+    <ClInclude Include="InformacionGenetica.h" />
     <ClInclude Include="ListaDeGenes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Gen.cpp" />
+    <ClCompile Include="InformacionGenetica.cpp" />
     <ClCompile Include="ListaDeGenes.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
