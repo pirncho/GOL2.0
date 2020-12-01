@@ -26,7 +26,7 @@ public:
 	* representan la misma secuencia de
 	* bits, es decir si son iguales.
 	*/
-	bool esIgualA(InformacionGenetica* otra);
+	bool esIgualA(InformacionGenetica otra);
 	/* post: combina la secuencia de bits de la
 	* instancia con la secuencia bits de
 	* 'otra', aplicando un OR bit a bit.

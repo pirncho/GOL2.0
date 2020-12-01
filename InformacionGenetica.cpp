@@ -13,11 +13,11 @@ InformacionGenetica::InformacionGenetica()
 	info.push_back(false);
 }
 
-bool InformacionGenetica::esIgualA(InformacionGenetica* otra)
+bool InformacionGenetica::esIgualA(InformacionGenetica otra)
 {
-	for(unsigned int i = 0; i < std::max(this-> contarBits(), otra-> contarBits()); i++)
+	for(unsigned int i = 0; i < std::max(this-> contarBits(), otra.contarBits()); i++)
 	{
-		if (otra->estaEncendidoBit(i) != this->estaEncendidoBit(i)) {
+		if (otra.estaEncendidoBit(i) != this->estaEncendidoBit(i)) {
 			return false;
 		}
 	}

@@ -1,15 +1,16 @@
 #pragma once
 #include <vector>
+#include "InformacionGenetica.h"
 class Gen
 {
 private:
-	std::vector<bool> nombre;
+	InformacionGenetica nombre;
 	long int edad;
 public:
 	/*
 	* Post: devuelve el nombre del gen
 	*/
-	std::vector<bool> getNombre() const;
+	InformacionGenetica getNombre() const;
 	/*
 	* Post: devuelve la edad del gen
 	*/
@@ -17,6 +18,6 @@ public:
 	/*
 	* Post edad = 0, this.nombre = nombre
 	*/
-	Gen(std::vector<bool> nombre);
+	Gen(InformacionGenetica nombre);
 };
 

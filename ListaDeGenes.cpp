@@ -1,5 +1,6 @@
 #include "ListaDeGenes.h"
-Gen* ListaDeGenes::agregarGen(std::vector<bool> nombre)
+
+Gen* ListaDeGenes::agregarGen(InformacionGenetica nombre)
 {
 	Gen* temp = buscarGen(nombre);
 	if (not temp) {
@@ -9,11 +10,11 @@ Gen* ListaDeGenes::agregarGen(std::vector<bool> nombre)
 	return temp;
 }
 
-	Gen* ListaDeGenes::buscarGen(std::vector<bool> nombre)
+	Gen* ListaDeGenes::buscarGen(InformacionGenetica nombre)
 {
 	for (unsigned int i = 0; i < lista.size(); i++)
 	{
-		if (lista[i]->getNombre() == nombre) {
+		if (nombre.esIgualA(lista[i]->getNombre()))  {
 			return lista[i];
 		}
 	}

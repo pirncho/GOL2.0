@@ -2,6 +2,7 @@
 #include <vector>
 #include "Gen.h"
 #include "globales.h"
+#include "InformacionGenetica.h"
 class InformacionYCarga
 {
 private:
@@ -11,11 +12,11 @@ public:
 	/*
 	* post: devuelve el nombre del gen
 	*/
-	std::vector<bool> getInfo();
+	InformacionGenetica getInfo();
 	/*
 	* post: devuleve la carga genetica de este gen
 	*/
 	char getCarga();
-	InformacionYCarga(std::vector<bool> info, char carga);
+	InformacionYCarga(InformacionGenetica info, char carga);
 };
 
