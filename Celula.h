@@ -1,16 +1,16 @@
 #pragma once
 #include <vector>
-#include "InformacionGenetica.h"
+#include "InformacionYCarga.h"
 
 class Celula
 {
 private:
 	bool estaViva = false;
-	std::vector<InformacionGenetica*> genes;
+	std::vector<InformacionYCarga*> genes;
 public:
 	bool getViva();
-	std::vector<InformacionGenetica*> getGenes();
+	std::vector<InformacionYCarga*> getGenes();
 	Celula(Celula* padre1, Celula* padre2, Celula* padre3);
-	Celula(std::vector<InformacionGenetica*> genes);
+	Celula(std::vector<InformacionYCarga*> genes);
 };
 

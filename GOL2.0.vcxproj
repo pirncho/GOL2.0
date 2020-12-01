@@ -143,14 +143,18 @@
     <ClInclude Include="Gen.h" />
     <ClInclude Include="globales.h" />
     <ClInclude Include="InformacionGenetica.h" />
+    <ClInclude Include="InformacionYCarga.h" />
     <ClInclude Include="ListaDeGenes.h" />
+    <ClInclude Include="logicaBinaria.h" />
     <ClInclude Include="Tablero.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Celula.cpp" />
     <ClCompile Include="Gen.cpp" />
     <ClCompile Include="InformacionGenetica.cpp" />
+    <ClCompile Include="InformacionYCarga.cpp" />
     <ClCompile Include="ListaDeGenes.cpp" />
+    <ClCompile Include="logicaBinaria.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Tablero.cpp" />
   </ItemGroup>

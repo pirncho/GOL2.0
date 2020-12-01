@@ -5,12 +5,12 @@ bool Celula::getViva()
 	return estaViva;
 }
 
-std::vector<InformacionGenetica*> Celula::getGenes()
+std::vector<InformacionYCarga*> Celula::getGenes()
 {
 	return genes;
 }
 
-Celula::Celula(std::vector<InformacionGenetica*> genes)
+Celula::Celula(std::vector<InformacionYCarga*> genes)
 {
 	estaViva = true;
 	this->genes = genes;
