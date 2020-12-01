@@ -1,7 +1,6 @@
 #pragma once
 #include <vector>
 #include "Gen.h"
-#include "ListaDeGenes.h"
 #include "globales.h"
 class InformacionGenetica
 {

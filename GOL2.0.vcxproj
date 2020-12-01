@@ -139,16 +139,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Celula.h" />
     <ClInclude Include="Gen.h" />
     <ClInclude Include="globales.h" />
     <ClInclude Include="InformacionGenetica.h" />
     <ClInclude Include="ListaDeGenes.h" />
+    <ClInclude Include="Tablero.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Celula.cpp" />
     <ClCompile Include="Gen.cpp" />
     <ClCompile Include="InformacionGenetica.cpp" />
     <ClCompile Include="ListaDeGenes.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Tablero.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
