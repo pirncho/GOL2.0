@@ -139,24 +139,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Celula.h" />
-    <ClInclude Include="Gen.h" />
-    <ClInclude Include="globales.h" />
-    <ClInclude Include="InformacionGenetica.h" />
-    <ClInclude Include="InformacionYCarga.h" />
-    <ClInclude Include="ListaDeGenes.h" />
-    <ClInclude Include="logicaBinaria.h" />
-    <ClInclude Include="Tablero.h" />
+    <ClInclude Include="src\Celula.h" />
+    <ClInclude Include="src\Gen.h" />
+    <ClInclude Include="src\globales.h" />
+    <ClInclude Include="src\InformacionGenetica.h" />
+    <ClInclude Include="src\InformacionYCarga.h" />
+    <ClInclude Include="src\ListaDeGenes.h" />
+    <ClInclude Include="src\logicaBinaria.h" />
+    <ClInclude Include="src\Tablero.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Celula.cpp" />
-    <ClCompile Include="Gen.cpp" />
-    <ClCompile Include="InformacionGenetica.cpp" />
-    <ClCompile Include="InformacionYCarga.cpp" />
-    <ClCompile Include="ListaDeGenes.cpp" />
-    <ClCompile Include="logicaBinaria.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Tablero.cpp" />
+    <ClCompile Include="src\Celula.cpp" />
+    <ClCompile Include="src\Gen.cpp" />
+    <ClCompile Include="src\InformacionGenetica.cpp" />
+    <ClCompile Include="src\InformacionYCarga.cpp" />
+    <ClCompile Include="src\ListaDeGenes.cpp" />
+    <ClCompile Include="src\logicaBinaria.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Tablero.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

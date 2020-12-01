@@ -15,54 +15,54 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Gen.h">
+    <ClInclude Include="src\Celula.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="ListaDeGenes.h">
+    <ClInclude Include="src\Gen.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="globales.h">
+    <ClInclude Include="src\globales.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Celula.h">
+    <ClInclude Include="src\InformacionGenetica.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Tablero.h">
+    <ClInclude Include="src\InformacionYCarga.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="InformacionYCarga.h">
+    <ClInclude Include="src\ListaDeGenes.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="InformacionGenetica.h">
+    <ClInclude Include="src\logicaBinaria.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="logicaBinaria.h">
+    <ClInclude Include="src\Tablero.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Gen.cpp">
+    <ClCompile Include="src\Celula.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="ListaDeGenes.cpp">
+    <ClCompile Include="src\Gen.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="src\InformacionGenetica.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="Celula.cpp">
+    <ClCompile Include="src\InformacionYCarga.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="Tablero.cpp">
+    <ClCompile Include="src\ListaDeGenes.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="logicaBinaria.cpp">
+    <ClCompile Include="src\logicaBinaria.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="InformacionYCarga.cpp">
+    <ClCompile Include="src\main.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="InformacionGenetica.cpp">
+    <ClCompile Include="src\Tablero.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
