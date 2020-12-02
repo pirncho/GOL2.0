@@ -1,4 +1,6 @@
-#pragma once
+#ifndef GEN
+#define GEN
+
 #include <vector>
 #include "InformacionGenetica.h"
 class Gen
@@ -21,3 +23,4 @@ public:
 	Gen(InformacionGenetica nombre);
 };
 
+#endif

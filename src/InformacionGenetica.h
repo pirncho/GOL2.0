@@ -1,4 +1,5 @@
-#pragma once
+#ifndef INFORMACION_GENETICA
+#define INFORMACION_GENETICA
 #include <string>
 #include <vector>
 #include "logicaBinaria.h"
@@ -42,3 +43,4 @@ public:
 	*/
 	unsigned int contarBits();
 };
+#endif // !INFORMACION_GENETICA

@@ -7,19 +7,49 @@ unsigned long int Tablero::getEdad()
 
 Celula* Tablero::getCelula(int fila, int columna)
 {
-	return (*tablero)[fila][columna];
+	return (tablero)[fila][columna];
 }
 
 int* Tablero::getDimensiones()
 {
-	int* dim  = new int[]{ alto,ancho };
+	int* dim  = new int[2]{ alto,ancho };	
 	return dim ;
 }
 
-Tablero::Tablero(int alto, int ancho)
+
+Tablero::Tablero(std::string rutaArchivo)
 {
-	this->edad = 0;
-	this->alto = alto;
-	this->ancho = ancho;
-	tablero = new std::vector<std::vector<Celula*>> (alto, std::vector<Celula*>(ancho, nullptr));
+	std::string linea;
+	std::vector<std::string> separada;
+	std::ifstream archivo;
+	archivo.open(rutaArchivo);
+	while (std::getline(archivo, linea))
+	{
+		char caracter = linea[0];
+		int palabra = 0;
+		while (not linea.empty()){
+			if (caracter == ' ') {
+				palabra++;
+			}
+			else
+			{
+				separada[palabra].push_back(caracter);
+			}
+			linea.erase(linea.begin());
+			caracter = linea[0];
+		}
+		if (separada[0] == "tablero") {
+			this->alto = stoi(separada[1]);
+			this->ancho = stoi(separada[2]);
+			tablero = new Celula**[alto];
+			for (int i = 0; i < alto; i++)
+			{
+				tablero[i] = new Celula * [ancho];
+			}
+		}
+
+
+	}
+
+	
 }
