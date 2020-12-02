@@ -1,4 +1,6 @@
-#pragma once
+#ifndef TABLERO
+#define TABLERO
+
 #include "Celula.h"
 #include <vector>
 #include <string>
@@ -18,3 +20,4 @@ public:
 	Tablero(std::string rutaArchivo);
 };
 
+#endif // !TABLERO

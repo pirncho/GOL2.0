@@ -1,4 +1,5 @@
-#pragma once
+#ifndef LISTA_DE_GENES
+#define LISTA_DE_GENES
 #include <vector>
 #include "Gen.h"
 #include "InformacionGenetica.h"
@@ -18,5 +19,4 @@ public:
 	*/
 	Gen* buscarGen(InformacionGenetica nombre);
 };
-
-
+#endif // !LISTA_DE_GENES
