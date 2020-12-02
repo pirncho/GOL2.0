@@ -8,10 +8,10 @@
 class Tablero
 {
 private:
-	int alto;
-	int ancho;
+	int alto= 0;
+	int ancho= 0;
 	unsigned long int edad = 0;
-	Celula*** tablero;
+	Celula*** tablero = nullptr;
 
 public:
 	unsigned long int getEdad();
@@ -19,5 +19,6 @@ public:
 	int* getDimensiones();
 	Tablero(std::string rutaArchivo);
 };
+
 
 #endif // !TABLERO

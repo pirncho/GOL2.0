@@ -12,7 +12,7 @@ Celula* Tablero::getCelula(int fila, int columna)
 
 int* Tablero::getDimensiones()
 {
-	int* dim  = new int[]{ alto,ancho };
+	int* dim  = new int[2]{ alto,ancho };	
 	return dim ;
 }
 
