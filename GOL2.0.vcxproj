@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Archivo.h" />
     <ClInclude Include="src\Celula.h" />
     <ClInclude Include="src\Gen.h" />
     <ClInclude Include="src\globales.h" />
@@ -146,9 +147,12 @@
     <ClInclude Include="src\InformacionYCarga.h" />
     <ClInclude Include="src\ListaDeGenes.h" />
     <ClInclude Include="src\logicaBinaria.h" />
+    <ClInclude Include="src\matematica.h" />
     <ClInclude Include="src\Tablero.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\matematica.cpp" />
+    <ClCompile Include="src\Archivo.cpp" />
     <ClCompile Include="src\Celula.cpp" />
     <ClCompile Include="src\Gen.cpp" />
     <ClCompile Include="src\InformacionGenetica.cpp" />

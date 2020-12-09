@@ -3,7 +3,10 @@
 
 #include <vector>
 #include <algorithm>
-bool XORBit(bool bit1, bool bit2);
+
+/*
+* post: devuelve un vector que contiene un xor elemento a elemento de los dos vectores
+*/
 std::vector<bool> XORSecuencia(std::vector<bool> bits1, std::vector<bool> bits2);
 
 #endif // !LOGICA BINARIA

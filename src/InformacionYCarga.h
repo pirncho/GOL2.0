@@ -19,7 +19,9 @@ public:
 	* post: devuleve la carga genetica de este gen
 	*/
 	char getCarga();
-
+	/*
+	post: se crea una instancia de informacon y carga con los datos que se pasa como argumento
+	*/
 	InformacionYCarga(InformacionGenetica info, char carga);
 
 };
