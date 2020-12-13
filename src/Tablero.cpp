@@ -19,19 +19,14 @@ int* Tablero::getDimensiones()
 
 Tablero::Tablero(std::string rutaArchivo)
 {
-	Archivo archivo((std::string)"instrucciones.txt");
-	std::vector<std::string>* linea = archivo.getLinea();
-	while (linea);
+	Archivo archivo(rutaArchivo);
+	std::vector<std::string>* linea;
+	do
 	{
+		linea = archivo.getLinea();
 		if ((*linea)[0] == "Tablero") {
 			this->alto = std::stoi((*linea)[1]);
 			this->ancho = std::stoi((*linea)[2]);
 		}
-
-
-		delete linea;
-		linea = archivo.getLinea();
-	}
-
-	
+	} while (linea);
 }
