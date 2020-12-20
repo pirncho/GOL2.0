@@ -26,3 +26,11 @@ Celula::Celula()
 	estaViva = false;
 	this->genes = {};
 }
+
+Celula::~Celula()
+{
+	for (unsigned int i = 0; i < genes.size(); i++)
+	{
+		delete genes[i];
+	}
+}

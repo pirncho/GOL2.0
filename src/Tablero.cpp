@@ -19,6 +19,10 @@ int* Tablero::getDimensiones()
 
 Tablero::Tablero(std::string rutaArchivo)
 {
+	this->edad = 0;
+	this->alto = 0;
+	this->ancho = 0;
+	this->tablero = nullptr;
 	Archivo archivo(rutaArchivo);
 	std::vector<std::string>* linea = nullptr;
 	do
@@ -79,4 +83,15 @@ void Tablero::ejecutarTurno()
 
 	delete[] tablero;
 	tablero = proximo;
+}
+
+Tablero::~Tablero()
+{
+	for (int  j= 0; j < alto; j++)
+	{
+		for (int i = 0; i < ancho; i++)
+		{
+			delete tablero[j][i];
+		}
+	}
 }

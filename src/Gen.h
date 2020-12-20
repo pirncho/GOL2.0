@@ -7,7 +7,8 @@ class Gen
 {
 private:
 	InformacionGenetica nombre;
-	long int edad;
+	unsigned long int edad;
+	long int cargaTotal;
 public:
 	/*
 	* Post: devuelve el nombre del gen
@@ -16,7 +17,7 @@ public:
 	/*
 	* Post: devuelve la edad del gen
 	*/
-	long int getEdad() const;
+	unsigned long int getEdad() const;
 	/*
 	* Post edad = 0, this.nombre = nombre
 	*/

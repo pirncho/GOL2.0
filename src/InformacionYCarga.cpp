@@ -15,3 +15,8 @@ InformacionYCarga::InformacionYCarga(InformacionGenetica info, char carga)
 	this->informacion = listaDeGenes.agregarGen(info);
 	this->carga = carga;
 }
+
+InformacionYCarga::~InformacionYCarga()
+{
+	delete informacion;
+}

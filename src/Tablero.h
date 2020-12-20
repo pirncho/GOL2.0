@@ -42,6 +42,10 @@ public:
 	post: ejecuta un turno
 	*/
 	void ejecutarTurno();
+	/*
+	post: se liberan todos los recursos asociados a la estructura
+	*/
+	~Tablero();
 };
 
 

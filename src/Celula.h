@@ -29,5 +29,9 @@ public:
 	post: this->genes contiene punteros a los genes del vector que se pasa por agumento
 	*/
 	Celula();
+	/*
+	post: se liberan todos los recursos asociados a la estructura
+	*/
+	~Celula();
 };
 #endif

@@ -23,6 +23,10 @@ public:
 	post: se crea una instancia de informacon y carga con los datos que se pasa como argumento
 	*/
 	InformacionYCarga(InformacionGenetica info, char carga);
+	/*
+	post: se liberan todos los recursos asociados a la estructura
+	*/
+	~InformacionYCarga();
 
 };
 #endif

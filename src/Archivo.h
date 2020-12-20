@@ -25,6 +25,7 @@ public:
 	post: archivoCargado es un vector con punteros a cada linea del archivo
 	*/
 	Archivo(std::string ruta);
+	
 };
 
 #endif

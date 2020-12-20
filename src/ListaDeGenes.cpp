@@ -20,3 +20,11 @@ Gen* ListaDeGenes::agregarGen(InformacionGenetica nombre)
 	}
 	return nullptr;
 }
+
+	ListaDeGenes::~ListaDeGenes()
+	{
+		for (unsigned int i = 0; i < lista.size(); i++)
+		{
+			delete lista[i];
+		}
+	}

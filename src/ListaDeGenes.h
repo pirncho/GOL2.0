@@ -18,5 +18,9 @@ public:
 	* Post: devuelve el puntero a ese gen si existe, devulelve nullptr si no existe
 	*/
 	Gen* buscarGen(InformacionGenetica nombre);
+	/*
+	post: se liberan todos los recursos asociados a la estructura
+	*/
+	~ListaDeGenes();
 };
 #endif // !LISTA_DE_GENES

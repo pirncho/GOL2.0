@@ -5,7 +5,7 @@ InformacionGenetica Gen::getNombre() const
 	return this->nombre;
 }
 
-long int Gen::getEdad() const
+unsigned long int Gen::getEdad() const
 {
 	return this->edad;
 }
