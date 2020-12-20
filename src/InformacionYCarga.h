@@ -2,9 +2,9 @@
 #define INFORMACION_Y_CARGA
 #include <vector>
 #include "Gen.h"
-#include "globales.h"
 #include "InformacionGenetica.h"
-
+#include "ListaDeGenes.h"
+extern ListaDeGenes listaDeGenes;
 
 class InformacionYCarga{
 private:

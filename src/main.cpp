@@ -1,10 +1,9 @@
-#include "globales.h"
 #include <iostream>
 #include "Tablero.h"
+#include "ListaDeGenes.h"
 
 ListaDeGenes listaDeGenes;
-Tablero tablero;
-
+Tablero tablero("../Tableros/tablero.txt");
 
 
 int main() {

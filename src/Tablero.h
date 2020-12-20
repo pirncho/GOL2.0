@@ -3,17 +3,17 @@
 
 #include "Celula.h"
 #include "Archivo.h"
-#include "globales.h"
 #include <vector>
 #include <string>
 #include <fstream>
+
 class Tablero
 {
 private:
-	int alto= 0;
-	int ancho= 0;
-	unsigned long int edad = 0;
-	Celula*** tablero = nullptr;
+	int alto;
+	int ancho;
+	unsigned long int edad;
+	Celula*** tablero;
 
 public:
 	/*
@@ -34,6 +34,14 @@ public:
 	post: se crea el tablero segun las especificaciones del archivo
 	*/
 	Tablero(std::string rutaArchivo);
+	/*
+	post: crea un tablero vacio
+	*/
+	Tablero();
+	/*
+	post: ejecuta un turno
+	*/
+	void ejecutarTurno();
 };
 
 
