@@ -142,16 +142,13 @@
     <ClInclude Include="src\Archivo.h" />
     <ClInclude Include="src\Celula.h" />
     <ClInclude Include="src\Gen.h" />
-    <ClInclude Include="src\globales.h" />
     <ClInclude Include="src\InformacionGenetica.h" />
     <ClInclude Include="src\InformacionYCarga.h" />
     <ClInclude Include="src\ListaDeGenes.h" />
     <ClInclude Include="src\logicaBinaria.h" />
-    <ClInclude Include="src\matematica.h" />
     <ClInclude Include="src\Tablero.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\matematica.cpp" />
     <ClCompile Include="src\Archivo.cpp" />
     <ClCompile Include="src\Celula.cpp" />
     <ClCompile Include="src\Gen.cpp" />
@@ -161,6 +158,9 @@
     <ClCompile Include="src\logicaBinaria.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Tablero.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Tableros\tablero.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

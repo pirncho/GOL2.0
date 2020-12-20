@@ -68,3 +68,15 @@ Tablero::Tablero()
 	this->edad = 0;
 	this->tablero = nullptr;
 }
+
+void Tablero::ejecutarTurno()
+{
+	Celula*** proximo = new Celula**[alto];
+	for (int i = 0; i < alto; i++)
+	{
+		proximo[i] = new Celula* [ancho];
+	}
+
+	delete[] tablero;
+	tablero = proximo;
+}

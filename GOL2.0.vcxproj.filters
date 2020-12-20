@@ -21,9 +21,6 @@
     <ClInclude Include="src\Gen.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="src\globales.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
     <ClInclude Include="src\InformacionGenetica.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
@@ -40,9 +37,6 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="src\Archivo.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="src\matematica.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
@@ -74,8 +68,8 @@
     <ClCompile Include="src\Archivo.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="src\matematica.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Tableros\tablero.txt" />
   </ItemGroup>
 </Project>
