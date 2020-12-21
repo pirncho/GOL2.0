@@ -8,8 +8,8 @@ extern ListaDeGenes listaDeGenes;
 
 class InformacionYCarga{
 private:
-	Gen* informacion = nullptr;
-	char carga = 0;
+	Gen* informacion;
+	char carga;
 public:
 	/*
 	* post: devuelve el nombre del gen

@@ -26,7 +26,7 @@ public:
 	*/
 	Celula(Celula* padre1, Celula* padre2, Celula* padre3);
 	/*
-	post: this->genes contiene punteros a los genes del vector que se pasa por agumento
+	post: se crea una celula muerta
 	*/
 	Celula();
 	/*

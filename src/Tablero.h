@@ -30,6 +30,11 @@ public:
 	*/
 	int* getDimensiones();
 	/*
+	pre: es una posicion valida en el tablero
+	post: devuelve un vector de punteros a las celulas vivas alrededor de la celda indicada
+	*/
+	std::vector<Celula*>* contarAlrededor(unsigned int y, unsigned int x);
+	/*
 	pre: el archivo existe
 	post: se crea el tablero segun las especificaciones del archivo
 	*/

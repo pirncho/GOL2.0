@@ -59,7 +59,7 @@ Tablero::Tablero(std::string rutaArchivo)
 		* la linea que dice "fin" indica el fin de la descripicion de una celula
 		*/
 		if ((*linea)[0] == "fin") {
-			tablero[y][x] = celula;
+			(tablero)[y][x] = celula;
 		}
 
 		} while (linea);
@@ -73,6 +73,25 @@ Tablero::Tablero()
 	this->tablero = nullptr;
 }
 
+std::vector<Celula*>* Tablero::contarAlrededor(unsigned int y, unsigned int x) {
+	std::vector<Celula*>* vec = new std::vector<Celula*>{};
+
+	unsigned int vertical[3] =   { (y - 1) % this->alto  , y , (y + 1) % this->alto  };
+	unsigned int horizontal[3] = { (x - 1) % this->ancho , x , (x + 1) % this->ancho };
+
+	for (int j = 0; j < 3; j++){
+		for (int i = 0; i < 3; i++) {
+			if (not(j == 1 && i == 1))
+			{
+				if (tablero[j][i]->getViva()) {
+					vec->push_back(tablero[j][i]);
+				}
+			}
+		}
+	}
+	return vec;
+}
+
 void Tablero::ejecutarTurno()
 {
 	Celula*** proximo = new Celula**[alto];
@@ -81,6 +100,34 @@ void Tablero::ejecutarTurno()
 		proximo[i] = new Celula* [ancho];
 	}
 
+	for (unsigned int j = 0; j < alto; j++)
+	{
+		for (unsigned int i = 0; i < ancho; i++)
+		{
+			std::vector<Celula*>* alrededor = contarAlrededor(j, i);
+			if (alrededor->size() == 3 && not tablero[j][i]->getViva()) // nace una nueva celula con los padres que figuran en el vector
+			{
+				proximo[j][i] = new Celula((*alrededor)[0],(*alrededor)[1],(*alrededor)[2]);
+				delete tablero[j][i];
+			}
+			if (alrededor->size() == 1 || alrededor->size() > 4) //muere por sobrepoblacion o despoblacion :C
+			{
+				proximo[j][i] = new Celula();
+				delete tablero[j][i];
+			}
+			if (alrededor->size() == 2 || (alrededor->size() == 3 && tablero[j][i]->getViva() )) //todo sigue igual
+			{
+				proximo[j][i] = tablero[j][i];
+			}
+
+			delete alrededor;
+		}
+	}
+
+	for (int j = 0; j < alto; j++)
+	{
+		delete[] tablero[j];
+	}
 	delete[] tablero;
 	tablero = proximo;
 }
