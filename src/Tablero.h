@@ -10,8 +10,8 @@
 class Tablero
 {
 private:
-	int alto;
-	int ancho;
+	unsigned int alto;
+	unsigned int ancho;
 	unsigned long int edad;
 	Celula*** tablero;
 
@@ -28,7 +28,12 @@ public:
 	/*
 	post: devuelve un array con el alto y ancho del tablero
 	*/
-	int* getDimensiones();
+	unsigned int* getDimensiones();
+	/*
+	pre: es una posicion valida en el tablero
+	post: devuelve un vector de punteros a las celulas vivas alrededor de la celda indicada
+	*/
+	std::vector<Celula*>* contarAlrededor(unsigned int y, unsigned int x);
 	/*
 	pre: el archivo existe
 	post: se crea el tablero segun las especificaciones del archivo

@@ -10,9 +10,9 @@ Celula* Tablero::getCelula(int fila, int columna)
 	return (tablero)[fila][columna];
 }
 
-int* Tablero::getDimensiones()
+unsigned int* Tablero::getDimensiones()
 {
-	int* dim  = new int[2]{ alto,ancho };	
+	unsigned int* dim  = new unsigned int[2]{ alto,ancho };	
 	return dim ;
 }
 
@@ -37,7 +37,7 @@ Tablero::Tablero(std::string rutaArchivo)
 			this->alto = std::stoi((*linea)[1]);
 			this->ancho = std::stoi((*linea)[2]);
 			this->tablero = new Celula**[alto];
-			for (int i = 0; i < alto; i++) {
+			for (unsigned int i = 0; i < alto; i++) {
 				this->tablero[i] = new Celula * [ancho];
 			}
 		}
@@ -76,20 +76,48 @@ Tablero::Tablero()
 void Tablero::ejecutarTurno()
 {
 	Celula*** proximo = new Celula**[alto];
-	for (int i = 0; i < alto; i++)
+	for (unsigned int i = 0; i < alto; i++)
 	{
 		proximo[i] = new Celula* [ancho];
 	}
 
+	for (unsigned int j = 0; j < alto; j++)
+	{
+		for (unsigned int i = 0; i < ancho; i++)
+		{
+			std::vector<Celula*>* alrededor = contarAlrededor(j, i);
+			if (alrededor->size() == 3 && not tablero[j][i]->getViva()) // nace una nueva celula con los padres que figuran en el vector
+			{
+				proximo[j][i] = new Celula((*alrededor)[0],(*alrededor)[1],(*alrededor)[2]);
+				delete tablero[j][i];
+			}
+			if (alrededor->size() == 1 || alrededor->size() > 4) //muere por sobrepoblacion o despoblacion :C
+			{
+				proximo[j][i] = new Celula();
+				delete tablero[j][i];
+			}
+			if (alrededor->size() == 2 || (alrededor->size() == 3 && tablero[j][i]->getViva() )) //todo sigue igual
+			{
+				proximo[j][i] = tablero[j][i];
+			}
+
+			delete alrededor;
+		}
+	}
+
+	for (unsigned int j = 0; j < alto; j++)
+	{
+		delete[] tablero[j];
+	}
 	delete[] tablero;
 	tablero = proximo;
 }
 
 Tablero::~Tablero()
 {
-	for (int  j= 0; j < alto; j++)
+	for (unsigned int  j= 0; j < alto; j++)
 	{
-		for (int i = 0; i < ancho; i++)
+		for (unsigned int i = 0; i < ancho; i++)
 		{
 			delete tablero[j][i];
 		}
