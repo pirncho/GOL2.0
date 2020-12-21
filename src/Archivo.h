@@ -10,7 +10,7 @@ private:
 	std::string ruta;
 	std::fstream archivo;
 	std::vector<std::vector<std::string>*> archivoCargado;
-	unsigned int numeroLinea;
+	unsigned int numeroLinea = 0;
 public:
 	/*
 	post: devuelve la ruta del archivo
