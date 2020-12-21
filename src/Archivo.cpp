@@ -41,4 +41,5 @@ Archivo::Archivo(std::string ruta)
         palabra = 0;
         this->archivoCargado.push_back(lineaSeparada);
     }
+    this->numeroLinea = 0;
 }
