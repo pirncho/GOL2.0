@@ -73,6 +73,24 @@ Tablero::Tablero()
 	this->tablero = nullptr;
 }
 
+std::vector<Celula*>* Tablero::contarAlrededor(unsigned int y, unsigned int x) {
+	std::vector<Celula*>* vec = new std::vector<Celula*>{};
+
+	unsigned int vertical[3] = { (y - 1) % this->alto  , y , (y + 1) % this->alto };
+	unsigned int horizontal[3] = { (x - 1) % this->ancho , x , (x + 1) % this->ancho };
+
+	for (int j = 0; j < 3; j++) {
+		for (int i = 0; i < 3; i++) {
+			if (not(j == 1 && i == 1))
+			{
+				if (tablero[j][i]->getViva()) {
+					vec->push_back(tablero[j][i]);
+				}
+			}
+		}
+	}
+	return vec;
+}
 void Tablero::ejecutarTurno()
 {
 	Celula*** proximo = new Celula**[alto];
